@@ -2,15 +2,16 @@
 #include<vector>
 using namespace std;
 int fun(vector<int>&arr,int low, int high){
-    int i=low+1;
+    int pivote= arr[low];
+    int i=low;
     int j=high;
     while (i<j)
     {
-        while (arr[low]>arr[i])
+        while (i<=high-1 && arr[i]<= pivote)
         {
             i++;
         }
-        while (arr[low]<arr[j])
+        while (j>=low+1 && arr[j]>pivote)
         {
             j--;
         }
@@ -18,8 +19,8 @@ int fun(vector<int>&arr,int low, int high){
         {
             swap(arr[i],arr[j]);
         }
-        else swap(arr[low],arr[j]);
     }
+    swap(arr[low],arr[j]);
     return j;
     
 }
