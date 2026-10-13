@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Compile and Run",
+            "label": "Run Current C++ File",
             "type": "shell",
-            "command": "g++ -std=c++17 '${file}' -o '${fileDirname}/${fileBasenameNoExtension}' && '${fileDirname}/${fileBasenameNoExtension}' < '${workspaceFolder}/input.txt' > '${workspaceFolder}/output.txt'",
+            "command": "g++ \"${file}\" -std=c++17 -o \"${fileDirname}/${fileBasenameNoExtension}\" && \"${fileDirname}/${fileBasenameNoExtension}\" < \"${workspaceFolder}/input.txt\" > \"${workspaceFolder}/output.txt\"",
             "group": {
                 "kind": "build",
                 "isDefault": true

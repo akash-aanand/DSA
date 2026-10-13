@@ -3,7 +3,7 @@ using namespace std;
 
 void insertionSort(int n, int arr[])
 {
-    for (int j = 0; j < n; j++)
+    for (int j = 1; j < n; j++)
     {
         int i = j;
         while (i > 0 && arr[i] < arr[i - 1])

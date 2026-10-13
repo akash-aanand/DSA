@@ -54,11 +54,15 @@ int main()
         int x;
         cin >> x;
         arr.push_back(x);
-    }
-    int high = arr.size() - 1;
-    mergeSort(arr, 0, high);
+
+        // arr[i]=x; 
+        /* this will not work because arr is empty vector so their are no any indexs*/
+        
+    };
     for (auto x : arr)
     {
         cout << x << " ";
     }
+    int high = arr.size() - 1;
+    mergeSort(arr, 0, high);
 }
